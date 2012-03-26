@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9B936D6D15203AD1000C572B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D6C15203AD1000C572B /* Cocoa.framework */; };
+		9B936D7715203AD1000C572B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D7515203AD1000C572B /* InfoPlist.strings */; };
+		9B936D7915203AD1000C572B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D7815203AD1000C572B /* main.m */; };
+		9B936D7D15203AD1000C572B /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D7B15203AD1000C572B /* Credits.rtf */; };
+		9B936D8015203AD1000C572B /* GOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D7F15203AD1000C572B /* GOAppDelegate.m */; };
+		9B936D8315203AD1000C572B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D8115203AD1000C572B /* MainMenu.xib */; };
+		9B936D8B15203AD2000C572B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D8A15203AD2000C572B /* SenTestingKit.framework */; };
+		9B936D8C15203AD2000C572B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D6C15203AD1000C572B /* Cocoa.framework */; };
+		9B936D9415203AD2000C572B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D9215203AD2000C572B /* InfoPlist.strings */; };
+		9B936D9715203AD2000C572B /* GOHTTPOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9B936D8D15203AD2000C572B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9B936D5F15203AD1000C572B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9B936D6715203AD1000C572B;
+			remoteInfo = GOHTTPOperation;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9B936D6815203AD1000C572B /* GOHTTPOperation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GOHTTPOperation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B936D6C15203AD1000C572B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		9B936D6F15203AD1000C572B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		9B936D7015203AD1000C572B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9B936D7115203AD1000C572B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9B936D7415203AD1000C572B /* GOHTTPOperation-Info.plist */ = {isa = PBXFileReference; path = "GOHTTPOperation-Info.plist"; sourceTree = "<group>"; };
+		9B936D7615203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B936D7815203AD1000C572B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9B936D7A15203AD1000C572B /* GOHTTPOperation-Prefix.pch */ = {isa = PBXFileReference; path = "GOHTTPOperation-Prefix.pch"; sourceTree = "<group>"; };
+		9B936D7C15203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		9B936D7E15203AD1000C572B /* GOAppDelegate.h */ = {isa = PBXFileReference; path = GOAppDelegate.h; sourceTree = "<group>"; };
+		9B936D7F15203AD1000C572B /* GOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOAppDelegate.m; sourceTree = "<group>"; };
+		9B936D8215203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		9B936D8915203AD2000C572B /* GOHTTPOperationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOHTTPOperationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B936D8A15203AD2000C572B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9B936D9115203AD2000C572B /* GOHTTPOperationTests-Info.plist */ = {isa = PBXFileReference; path = "GOHTTPOperationTests-Info.plist"; sourceTree = "<group>"; };
+		9B936D9315203AD2000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9B936D9515203AD2000C572B /* GOHTTPOperationTests.h */ = {isa = PBXFileReference; path = GOHTTPOperationTests.h; sourceTree = "<group>"; };
+		9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperationTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9B936D6515203AD1000C572B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D6D15203AD1000C572B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B936D8515203AD2000C572B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D8B15203AD2000C572B /* SenTestingKit.framework in Frameworks */,
+				9B936D8C15203AD2000C572B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9B936D5D15203AD1000C572B = {
+			isa = PBXGroup;
+			children = (
+				9B936D7215203AD1000C572B /* GOHTTPOperation */,
+				9B936D8F15203AD2000C572B /* GOHTTPOperationTests */,
+				9B936D6B15203AD1000C572B /* Frameworks */,
+				9B936D6915203AD1000C572B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9B936D6915203AD1000C572B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D6815203AD1000C572B /* GOHTTPOperation.app */,
+				9B936D8915203AD2000C572B /* GOHTTPOperationTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9B936D6B15203AD1000C572B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D6C15203AD1000C572B /* Cocoa.framework */,
+				9B936D8A15203AD2000C572B /* SenTestingKit.framework */,
+				9B936D6E15203AD1000C572B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9B936D6E15203AD1000C572B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D6F15203AD1000C572B /* AppKit.framework */,
+				9B936D7015203AD1000C572B /* CoreData.framework */,
+				9B936D7115203AD1000C572B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		9B936D7215203AD1000C572B /* GOHTTPOperation */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D7E15203AD1000C572B /* GOAppDelegate.h */,
+				9B936D7F15203AD1000C572B /* GOAppDelegate.m */,
+				9B936D8115203AD1000C572B /* MainMenu.xib */,
+				9B936D7315203AD1000C572B /* Supporting Files */,
+			);
+			path = GOHTTPOperation;
+			sourceTree = "<group>";
+		};
+		9B936D7315203AD1000C572B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D7415203AD1000C572B /* GOHTTPOperation-Info.plist */,
+				9B936D7515203AD1000C572B /* InfoPlist.strings */,
+				9B936D7815203AD1000C572B /* main.m */,
+				9B936D7A15203AD1000C572B /* GOHTTPOperation-Prefix.pch */,
+				9B936D7B15203AD1000C572B /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9B936D8F15203AD2000C572B /* GOHTTPOperationTests */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D9515203AD2000C572B /* GOHTTPOperationTests.h */,
+				9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */,
+				9B936D9015203AD2000C572B /* Supporting Files */,
+			);
+			path = GOHTTPOperationTests;
+			sourceTree = "<group>";
+		};
+		9B936D9015203AD2000C572B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B936D9115203AD2000C572B /* GOHTTPOperationTests-Info.plist */,
+				9B936D9215203AD2000C572B /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9B936D6715203AD1000C572B /* GOHTTPOperation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B936D9A15203AD2000C572B /* Build configuration list for PBXNativeTarget "GOHTTPOperation" */;
+			buildPhases = (
+				9B936D6415203AD1000C572B /* Sources */,
+				9B936D6515203AD1000C572B /* Frameworks */,
+				9B936D6615203AD1000C572B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GOHTTPOperation;
+			productName = GOHTTPOperation;
+			productReference = 9B936D6815203AD1000C572B /* GOHTTPOperation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9B936D8815203AD2000C572B /* GOHTTPOperationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9B936D9D15203AD2000C572B /* Build configuration list for PBXNativeTarget "GOHTTPOperationTests" */;
+			buildPhases = (
+				9B936D8415203AD2000C572B /* Sources */,
+				9B936D8515203AD2000C572B /* Frameworks */,
+				9B936D8615203AD2000C572B /* Resources */,
+				9B936D8715203AD2000C572B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B936D8E15203AD2000C572B /* PBXTargetDependency */,
+			);
+			name = GOHTTPOperationTests;
+			productName = GOHTTPOperationTests;
+			productReference = 9B936D8915203AD2000C572B /* GOHTTPOperationTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9B936D5F15203AD1000C572B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GO;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "SNAP Interactive";
+			};
+			buildConfigurationList = 9B936D6215203AD1000C572B /* Build configuration list for PBXProject "GOHTTPOperation" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9B936D5D15203AD1000C572B;
+			productRefGroup = 9B936D6915203AD1000C572B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9B936D6715203AD1000C572B /* GOHTTPOperation */,
+				9B936D8815203AD2000C572B /* GOHTTPOperationTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9B936D6615203AD1000C572B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D7715203AD1000C572B /* InfoPlist.strings in Resources */,
+				9B936D7D15203AD1000C572B /* Credits.rtf in Resources */,
+				9B936D8315203AD1000C572B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B936D8615203AD2000C572B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D9415203AD2000C572B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B936D8715203AD2000C572B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9B936D6415203AD1000C572B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D7915203AD1000C572B /* main.m in Sources */,
+				9B936D8015203AD1000C572B /* GOAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B936D8415203AD2000C572B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B936D9715203AD2000C572B /* GOHTTPOperationTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9B936D8E15203AD2000C572B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9B936D6715203AD1000C572B /* GOHTTPOperation */;
+			targetProxy = 9B936D8D15203AD2000C572B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9B936D7515203AD1000C572B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B936D7615203AD1000C572B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9B936D7B15203AD1000C572B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B936D7C15203AD1000C572B /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		9B936D8115203AD1000C572B /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B936D8215203AD1000C572B /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		9B936D9215203AD2000C572B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9B936D9315203AD2000C572B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9B936D9815203AD2000C572B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9B936D9915203AD2000C572B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9B936D9B15203AD2000C572B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
+				INFOPLIST_FILE = "GOHTTPOperation/GOHTTPOperation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9B936D9C15203AD2000C572B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
+				INFOPLIST_FILE = "GOHTTPOperation/GOHTTPOperation-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9B936D9E15203AD2000C572B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GOHTTPOperation.app/Contents/MacOS/GOHTTPOperation";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
+				INFOPLIST_FILE = "GOHTTPOperationTests/GOHTTPOperationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		9B936D9F15203AD2000C572B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/GOHTTPOperation.app/Contents/MacOS/GOHTTPOperation";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
+				INFOPLIST_FILE = "GOHTTPOperationTests/GOHTTPOperationTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9B936D6215203AD1000C572B /* Build configuration list for PBXProject "GOHTTPOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B936D9815203AD2000C572B /* Debug */,
+				9B936D9915203AD2000C572B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9B936D9A15203AD2000C572B /* Build configuration list for PBXNativeTarget "GOHTTPOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B936D9B15203AD2000C572B /* Debug */,
+				9B936D9C15203AD2000C572B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9B936D9D15203AD2000C572B /* Build configuration list for PBXNativeTarget "GOHTTPOperationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9B936D9E15203AD2000C572B /* Debug */,
+				9B936D9F15203AD2000C572B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9B936D5F15203AD1000C572B /* Project object */;
+}
