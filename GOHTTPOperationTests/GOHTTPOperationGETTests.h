@@ -8,6 +8,8 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface GOHTTPOperationTests : SenTestCase
-
+@class GOHTTPOperation;
+@interface GOHTTPOperationGETTests : SenTestCase{
+    GOHTTPOperation *_operation;
+}
 @end

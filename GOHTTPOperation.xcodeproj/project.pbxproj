@@ -16,7 +16,9 @@
 		9B936D8B15203AD2000C572B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D8A15203AD2000C572B /* SenTestingKit.framework */; };
 		9B936D8C15203AD2000C572B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D6C15203AD1000C572B /* Cocoa.framework */; };
 		9B936D9415203AD2000C572B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D9215203AD2000C572B /* InfoPlist.strings */; };
-		9B936D9715203AD2000C572B /* GOHTTPOperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */; };
+		9B936D9715203AD2000C572B /* GOHTTPOperationGETTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */; };
+		9B936DA215203AE9000C572B /* GOHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936DA015203AE9000C572B /* GOHTTPOperation.m */; };
+		9B936DA315203AE9000C572B /* GOHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936DA015203AE9000C572B /* GOHTTPOperation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +37,22 @@
 		9B936D6F15203AD1000C572B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		9B936D7015203AD1000C572B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9B936D7115203AD1000C572B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9B936D7415203AD1000C572B /* GOHTTPOperation-Info.plist */ = {isa = PBXFileReference; path = "GOHTTPOperation-Info.plist"; sourceTree = "<group>"; };
+		9B936D7415203AD1000C572B /* GOHTTPOperation-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GOHTTPOperation-Info.plist"; sourceTree = "<group>"; };
 		9B936D7615203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9B936D7815203AD1000C572B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		9B936D7A15203AD1000C572B /* GOHTTPOperation-Prefix.pch */ = {isa = PBXFileReference; path = "GOHTTPOperation-Prefix.pch"; sourceTree = "<group>"; };
+		9B936D7A15203AD1000C572B /* GOHTTPOperation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GOHTTPOperation-Prefix.pch"; sourceTree = "<group>"; };
 		9B936D7C15203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		9B936D7E15203AD1000C572B /* GOAppDelegate.h */ = {isa = PBXFileReference; path = GOAppDelegate.h; sourceTree = "<group>"; };
+		9B936D7E15203AD1000C572B /* GOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOAppDelegate.h; sourceTree = "<group>"; };
 		9B936D7F15203AD1000C572B /* GOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOAppDelegate.m; sourceTree = "<group>"; };
 		9B936D8215203AD1000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		9B936D8915203AD2000C572B /* GOHTTPOperationTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOHTTPOperationTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B936D8A15203AD2000C572B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		9B936D9115203AD2000C572B /* GOHTTPOperationTests-Info.plist */ = {isa = PBXFileReference; path = "GOHTTPOperationTests-Info.plist"; sourceTree = "<group>"; };
+		9B936D9115203AD2000C572B /* GOHTTPOperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GOHTTPOperationTests-Info.plist"; sourceTree = "<group>"; };
 		9B936D9315203AD2000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9B936D9515203AD2000C572B /* GOHTTPOperationTests.h */ = {isa = PBXFileReference; path = GOHTTPOperationTests.h; sourceTree = "<group>"; };
-		9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperationTests.m; sourceTree = "<group>"; };
+		9B936D9515203AD2000C572B /* GOHTTPOperationGETTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOHTTPOperationGETTests.h; sourceTree = "<group>"; };
+		9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperationGETTests.m; sourceTree = "<group>"; };
+		9B936DA015203AE9000C572B /* GOHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperation.m; sourceTree = "<group>"; };
+		9B936DA115203AE9000C572B /* GOHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOHTTPOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		9B936D7215203AD1000C572B /* GOHTTPOperation */ = {
 			isa = PBXGroup;
 			children = (
+				9B936DA115203AE9000C572B /* GOHTTPOperation.h */,
+				9B936DA015203AE9000C572B /* GOHTTPOperation.m */,
 				9B936D7E15203AD1000C572B /* GOAppDelegate.h */,
 				9B936D7F15203AD1000C572B /* GOAppDelegate.m */,
 				9B936D8115203AD1000C572B /* MainMenu.xib */,
@@ -137,8 +143,8 @@
 		9B936D8F15203AD2000C572B /* GOHTTPOperationTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B936D9515203AD2000C572B /* GOHTTPOperationTests.h */,
-				9B936D9615203AD2000C572B /* GOHTTPOperationTests.m */,
+				9B936D9515203AD2000C572B /* GOHTTPOperationGETTests.h */,
+				9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */,
 				9B936D9015203AD2000C572B /* Supporting Files */,
 			);
 			path = GOHTTPOperationTests;
@@ -264,6 +270,7 @@
 			files = (
 				9B936D7915203AD1000C572B /* main.m in Sources */,
 				9B936D8015203AD1000C572B /* GOAppDelegate.m in Sources */,
+				9B936DA215203AE9000C572B /* GOHTTPOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,7 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B936D9715203AD2000C572B /* GOHTTPOperationTests.m in Sources */,
+				9B936D9715203AD2000C572B /* GOHTTPOperationGETTests.m in Sources */,
+				9B936DA315203AE9000C572B /* GOHTTPOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +385,7 @@
 				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
 				INFOPLIST_FILE = "GOHTTPOperation/GOHTTPOperation-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,6 +397,7 @@
 				GCC_PREFIX_HEADER = "GOHTTPOperation/GOHTTPOperation-Prefix.pch";
 				INFOPLIST_FILE = "GOHTTPOperation/GOHTTPOperation-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_AFTER_BUILD = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -439,6 +449,7 @@
 				9B936D9C15203AD2000C572B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9B936D9D15203AD2000C572B /* Build configuration list for PBXNativeTarget "GOHTTPOperationTests" */ = {
 			isa = XCConfigurationList;
@@ -447,6 +458,7 @@
 				9B936D9F15203AD2000C572B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
