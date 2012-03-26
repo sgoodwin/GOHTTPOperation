@@ -1,0 +1,3 @@
+** GOHTTPOperation **
+
+This can be made to do more, but first I want to make sure what's there is plenty testable. This is more to practice testing Objective-C than to actually expect anyone to care about it.
