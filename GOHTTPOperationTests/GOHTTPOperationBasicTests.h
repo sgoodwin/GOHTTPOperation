@@ -9,7 +9,7 @@
 #import <SenTestingKit/SenTestingKit.h>
 
 @class GOHTTPOperation;
-@interface GOHTTPOperationGETTests : SenTestCase{
+@interface GOHTTPOperationBasicTests : SenTestCase{
     GOHTTPOperation *_operation;
 }
 @end

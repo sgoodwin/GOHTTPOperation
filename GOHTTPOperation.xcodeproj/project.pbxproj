@@ -16,7 +16,7 @@
 		9B936D8B15203AD2000C572B /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D8A15203AD2000C572B /* SenTestingKit.framework */; };
 		9B936D8C15203AD2000C572B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B936D6C15203AD1000C572B /* Cocoa.framework */; };
 		9B936D9415203AD2000C572B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9B936D9215203AD2000C572B /* InfoPlist.strings */; };
-		9B936D9715203AD2000C572B /* GOHTTPOperationGETTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */; };
+		9B936D9715203AD2000C572B /* GOHTTPOperationBasicTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936D9615203AD2000C572B /* GOHTTPOperationBasicTests.m */; };
 		9B936DA215203AE9000C572B /* GOHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936DA015203AE9000C572B /* GOHTTPOperation.m */; };
 		9B936DA315203AE9000C572B /* GOHTTPOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B936DA015203AE9000C572B /* GOHTTPOperation.m */; };
 /* End PBXBuildFile section */
@@ -49,8 +49,8 @@
 		9B936D8A15203AD2000C572B /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		9B936D9115203AD2000C572B /* GOHTTPOperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GOHTTPOperationTests-Info.plist"; sourceTree = "<group>"; };
 		9B936D9315203AD2000C572B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9B936D9515203AD2000C572B /* GOHTTPOperationGETTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOHTTPOperationGETTests.h; sourceTree = "<group>"; };
-		9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperationGETTests.m; sourceTree = "<group>"; };
+		9B936D9515203AD2000C572B /* GOHTTPOperationBasicTests.h */ = {isa = PBXFileReference; path = GOHTTPOperationBasicTests.h; sourceTree = "<group>"; };
+		9B936D9615203AD2000C572B /* GOHTTPOperationBasicTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperationBasicTests.m; sourceTree = "<group>"; };
 		9B936DA015203AE9000C572B /* GOHTTPOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOHTTPOperation.m; sourceTree = "<group>"; };
 		9B936DA115203AE9000C572B /* GOHTTPOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOHTTPOperation.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,8 +143,8 @@
 		9B936D8F15203AD2000C572B /* GOHTTPOperationTests */ = {
 			isa = PBXGroup;
 			children = (
-				9B936D9515203AD2000C572B /* GOHTTPOperationGETTests.h */,
-				9B936D9615203AD2000C572B /* GOHTTPOperationGETTests.m */,
+				9B936D9515203AD2000C572B /* GOHTTPOperationBasicTests.h */,
+				9B936D9615203AD2000C572B /* GOHTTPOperationBasicTests.m */,
 				9B936D9015203AD2000C572B /* Supporting Files */,
 			);
 			path = GOHTTPOperationTests;
@@ -278,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B936D9715203AD2000C572B /* GOHTTPOperationGETTests.m in Sources */,
+				9B936D9715203AD2000C572B /* GOHTTPOperationBasicTests.m in Sources */,
 				9B936DA315203AE9000C572B /* GOHTTPOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

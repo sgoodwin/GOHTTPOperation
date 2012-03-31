@@ -6,10 +6,10 @@
 //  Copyright (c) 2012 SNAP Interactive. All rights reserved.
 //
 
-#import "GOHTTPOperationGETTests.h"
+#import "GOHTTPOperationBasicTests.h"
 #import "GOHTTPOperation.h"
 
-@implementation GOHTTPOperationGETTests
+@implementation GOHTTPOperationBasicTests
 
 - (void)setUp{
     [super setUp];
@@ -33,9 +33,10 @@
 
 - (void)testDidReceiveData{
     NSData *data = [@"Hey sup?" dataUsingEncoding:NSUTF8StringEncoding];
+    [_operation connection:nil didReceiveResponse:nil];
     [_operation connection:nil didReceiveData:data];
-    STAssertTrue([data length] == [[_operation data] length], @"Better hold onto the data we've received (%i vs %i)", [data length], [[_operation data] length]);
-    STAssertTrue([data isEqualToData:[_operation data]], @"Better hold the data accurately");
+    STAssertTrue([data length] == [[_operation data] length], @"(%i vs %i)", [data length], [[_operation data] length]);
+    STAssertTrue([data isEqualToData:[_operation data]], @"%@ isEqual: %@", data, [_operation data]);
 }
 
 - (void)testDidFailWithError{
