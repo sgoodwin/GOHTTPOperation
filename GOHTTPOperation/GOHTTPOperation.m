@@ -15,7 +15,9 @@
 @implementation GOHTTPOperation
 @synthesize executing = _executing;
 @synthesize finished = _finished;
+@synthesize statusCode = _statusCode;
 @synthesize completions = _completions;
+@synthesize failures = _failures;
 @synthesize request = _request;
 @synthesize data = _data;
 
@@ -31,8 +33,10 @@
             [request setHTTPMethod:@"POST"];
             break;
     }
+    [request setTimeoutInterval:10.0];
     [operation setRequest:request];
     [operation setCompletions:[NSMutableArray array]];
+    [operation setFailures:[NSMutableArray array]];
     return operation;
 }
 
@@ -51,7 +55,6 @@
 
 - (void)requestOnMainThread{
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:self.request delegate:self startImmediately:NO];
-    
     if(connection){
         [connection start];
     }else{
@@ -75,12 +78,17 @@
     [self.completions addObject:[block copy]];
 }
 
+- (void)addFailure:(GOFailureBlock)block{
+    [self.failures addObject:[block copy]];
+}
+
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response{
     if(self.isCancelled){
         [connection cancel];
         [self finish];
         return;
     }
+    self.statusCode = [(NSHTTPURLResponse*)response statusCode];
     self.data = [NSMutableData data];
 }
 
@@ -94,10 +102,21 @@
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error{
+    [self.failures enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        GOFailureBlock block = obj;
+        block(self.statusCode, self.data);
+    }];
     [self finish];
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection{
+    if(self.statusCode != 200){
+        [self.failures enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            GOFailureBlock block  = obj;
+            block(self.statusCode, self.data);
+        }];
+        return;
+    }
     [self.completions enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop){
         GODataBlock block = obj;
         block(self.data);

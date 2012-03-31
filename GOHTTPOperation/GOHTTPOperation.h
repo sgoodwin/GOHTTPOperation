@@ -13,17 +13,21 @@ typedef enum{
 }GOHTTPMethod;
 
 typedef void (^GODataBlock)(NSData* data);
+typedef void (^GOFailureBlock)(NSInteger statusCode, NSData *data);
 
 @interface GOHTTPOperation : NSOperation<NSURLConnectionDelegate, NSURLDownloadDelegate>
 @property (assign, getter=isExecuting) BOOL executing;
 @property (assign, getter=isFinished) BOOL finished;
 @property (strong) NSMutableData *data;
+@property (assign) NSInteger statusCode;
 
 @property (retain) NSMutableArray *completions;
+@property (retain) NSMutableArray *failures;
 @property (strong) NSURLRequest *request;
 
 + (id)operationWithURL:(NSURL*)url method:(GOHTTPMethod)method;
 - (void)addCompletion:(GODataBlock)block;
+- (void)addFailure:(GOFailureBlock)block;
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response;
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data;
