@@ -8,7 +8,5 @@
 
 #import <SenTestingKit/SenTestingKit.h>
 
-@interface GOHTTPOperationGETTests : SenTestCase{
-    dispatch_semaphore_t _semaphore;
-}
+@interface GOHTTPOperationGETTests : SenTestCase
 @end

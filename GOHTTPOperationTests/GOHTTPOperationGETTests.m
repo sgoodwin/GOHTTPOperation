@@ -17,8 +17,6 @@
     [NSURLProtocol registerClass:[GOFakeHTTPProtocol class]];
     [GOFakeHTTPProtocol setFakeResponseData:nil];
     [GOFakeHTTPProtocol setFakeStatusCode:200];
-    
-    _semaphore = dispatch_semaphore_create(0);
 }
 
 - (void)tearDown{
@@ -26,31 +24,35 @@
     [super tearDown];
 }
 
-- (void)waitUntilFinished:(NSTimeInterval)timeout{
-    while(dispatch_semaphore_wait(_semaphore, DISPATCH_TIME_NOW)){
-        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:10]];
+- (void)waitUntilFinished:(dispatch_semaphore_t)semaphor withTimeout:(NSTimeInterval)timeout{
+    while(dispatch_semaphore_wait(semaphor, DISPATCH_TIME_NOW)){
+        [[NSRunLoop currentRunLoop] runMode:NSDefaultRunLoopMode beforeDate:[NSDate dateWithTimeIntervalSinceNow:timeout]];
     }
 }
 
 - (void)testBasicGET{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
+    [GOFakeHTTPProtocol setFakeStatusCode:200];
     [GOFakeHTTPProtocol setFakeResponseData:[@"hey sup?" dataUsingEncoding:NSUTF8StringEncoding]];
     
-    NSURL *url = [NSURL URLWithString:@"http://google.com"];
+    NSURL *url = [NSURL URLWithString:@"http://google.com/basicGET"];
     GOHTTPOperation *operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
     [operation addCompletion:^(NSData *data) {
-        STAssertNotNil(data, @"Missing response data");
-        
-        dispatch_semaphore_signal(_semaphore);
+        STAssertNotNil(data, @"Missing response data");        
+        dispatch_semaphore_signal(semaphore);
     }];
     [operation addFailure:^(NSInteger statusCode, NSData *data){
         STFail(@"This should never be called");
     }];
     [[NSOperationQueue mainQueue] addOperation:operation];
     
-    [self waitUntilFinished:10.0];
+    [self waitUntilFinished:semaphore withTimeout:10.0];
 }
 
 - (void)testBasicGETFailure{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
     NSURL *url = [NSURL URLWithString:@"http://google.com"];
     GOHTTPOperation *operation = [GOHTTPOperation operationWithURL:url method:GOHTTPMethodGET];
     [operation addCompletion:^(NSData *data) {
@@ -59,14 +61,16 @@
     [operation addFailure:^(NSInteger statusCode, NSData *data){
         STAssertTrue(YES, @"Success");
         
-        dispatch_semaphore_signal(_semaphore);
+        dispatch_semaphore_signal(semaphore);
     }];
     [[NSOperationQueue mainQueue] addOperation:operation];
     
-    [self waitUntilFinished:10.0];
+    [self waitUntilFinished:semaphore withTimeout:10.0];
 }
 
 - (void)test400StatusCode{
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(0);
+    
     NSInteger fakeCode = 404;
     [GOFakeHTTPProtocol setFakeStatusCode:fakeCode];
     [GOFakeHTTPProtocol setFakeResponseData:[@"hey sup?" dataUsingEncoding:NSUTF8StringEncoding]];
@@ -80,11 +84,11 @@
         STAssertTrue(YES, @"Success");
         STAssertEquals(statusCode, fakeCode, @"%i == %i", statusCode, fakeCode);
         
-        dispatch_semaphore_signal(_semaphore);
+        dispatch_semaphore_signal(semaphore);
     }];
     [[NSOperationQueue mainQueue] addOperation:operation];
     
-    [self waitUntilFinished:10.0];
+    [self waitUntilFinished:semaphore withTimeout:10.0];
 }
 
 @end

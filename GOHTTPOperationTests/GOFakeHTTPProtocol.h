@@ -12,5 +12,6 @@
 
 + (void)setFakeStatusCode:(NSInteger)code;
 + (void)setFakeResponseData:(NSData *)data;
++ (void)setFakeHeaders:(NSDictionary *)headers;
 
 @end

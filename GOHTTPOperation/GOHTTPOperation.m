@@ -115,8 +115,10 @@
             GOFailureBlock block  = obj;
             block(self.statusCode, self.data);
         }];
+        [self finish];
         return;
     }
+    
     [self.completions enumerateObjectsWithOptions:NSEnumerationConcurrent usingBlock:^(id obj, NSUInteger idx, BOOL *stop){
         GODataBlock block = obj;
         block(self.data);
